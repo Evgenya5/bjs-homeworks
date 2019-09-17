@@ -35,15 +35,15 @@ function calculateAverageRating(){
 function getAverageMark(marks){
 	let sum = 0;
 	let averageMark;
-    if (marks.length() > 5) {
+    if (marks.length > 5) {
     	console.log("Количество оценок больше 5");
     	marks.splice(5);
     }
     console.log(marks);
-    for (let i = 0; i < marks.length(); i++) {
+    for (let i = 0; i < marks.length; i++) {
     	sum = sum + marks[i];
     }
-	averageMark = sum / marks.length();
+	averageMark = sum / marks.length
     return averageMark;
 }
 
@@ -55,7 +55,7 @@ function calculateDrinkTask(){
 }
 
 function askDrink(name,dateOfBirthday){
-    let year = new Date;
+    let year = new Date();
     let age = year.getFullYear() - dateOfBirthday.getFullYear();
     let result;
     if (age > 18) {
