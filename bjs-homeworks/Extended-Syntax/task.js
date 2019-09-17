@@ -11,19 +11,15 @@ function calculateQuadraticEquation(){
 }
 
 function getResult(a,b,c){
-	let x = [];
 	let D;
 	D = b*b - 4 * a * c;
 	if (D < 0) {
-		x = [];
+		return [];
 	} else if (D > 0) {
-		x = [(- b + Math.sqrt(D))/ (2 * a), (- b - Math.sqrt(D))/ (2 * a)];
-		
+		return [(- b + Math.sqrt(D))/ (2 * a), (- b - Math.sqrt(D))/ (2 * a)];
 	} else {
-		x = [- b / (2 * a)];
+		return [- b / (2 * a)];
 	}
-    return x;
-
 }
 
 function calculateAverageRating(){
@@ -34,7 +30,6 @@ function calculateAverageRating(){
 
 function getAverageMark(marks){
 	let sum = 0;
-	let averageMark;
     if (marks.length > 5) {
     	console.log("Количество оценок больше 5");
     	marks.splice(5);
@@ -43,8 +38,7 @@ function getAverageMark(marks){
     for (let i = 0; i < marks.length; i++) {
     	sum = sum + marks[i];
     }
-	averageMark = sum / marks.length
-    return averageMark;
+    return sum / marks.length;
 }
 
 function calculateDrinkTask(){
