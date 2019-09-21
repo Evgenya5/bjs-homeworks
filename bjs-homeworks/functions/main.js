@@ -39,12 +39,16 @@ showSolutionsMessage(2,4,2);
 function getAverageScore(data) {
 	let arrayOfAvarageMarks = [];
 	let i = 0;
+	let averageScore = {};
 	for (let subject in data) {
-		console.log(`${subject}: ${getArrayAverage(data[subject])}`);
+		averageScore[subject] = getArrayAverage(data[subject]);
+		//console.log(`${subject}: ${getArrayAverage(data[subject])}`);
         arrayOfAvarageMarks[i] = getArrayAverage(data[subject]);
         i++;
 	}
-	console.log(`average: ${getArrayAverage(arrayOfAvarageMarks)}`);
+	//console.log(`average: ${getArrayAverage(arrayOfAvarageMarks)}`);
+	averageScore.average = getArrayAverage(arrayOfAvarageMarks);
+	console.log(averageScore);
 }
 function getArrayAverage(arr) {
 	let sum = 0;
